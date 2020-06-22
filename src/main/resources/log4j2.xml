@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+<Configuration status="info" name="spring-boot-hbase-logs-to-kafka" packages="com.edsf.hbase.plugin.kafka">
+
+    <Appenders>
+        <Kafka name="kafkaAppender" topic="hbase-logs">
+           <PatternLayout pattern="%date %message"/>
+           &lt;!&ndash;&lt;!&ndash; <JSONLayout />&ndash;&gt;&ndash;&gt;
+            <Property name="bootstrap.servers">localhost.localdomain:9092</Property>
+        </Kafka>
+
+       &lt;!&ndash; &lt;!&ndash;stdout/stderr included for testing Oozie log4j edits&ndash;&gt;
+       &lt;!&ndash; <Console name="stdout" target="SYSTEM_OUT">
+            <PatternLayout pattern="%d{HH:mm:ss.SSS} %-5p [%-7t] %F:%L - %m%n"/>
+        </Console>
+        <Console name="stderr" target="SYSTEM_ERR">
+            <PatternLayout pattern="%d{HH:mm:ss.SSS} %-5p [%-7t] %F:%L - %m%n" />
+            <Filters>21818
+                <ThresholdFilter level="WARN" onMatch="ACCEPT" />
+            </Filters>
+        </Console>&ndash;&gt;&ndash;&gt;
+
+    </Appenders>
+    <Loggers>
+        <Root level="INFO">
+            <AppenderRef ref="kafkaAppender"/>
+
+       &lt;!&ndash;     &lt;!&ndash;stdout/stderr included for testing Oozie log4j edits&ndash;&gt;
+          &lt;!&ndash;  <AppenderRef ref="stdout"/>
+            <AppenderRef ref="stderr"/>&ndash;&gt;&ndash;&gt;
+        </Root>
+        <Logger name="org.apache.kafka" level="warn" />
+    </Loggers>
+</Configuration>
+-->
+
+
+<!--<Configuration status="warn" name="spring-boot-hbase-logs-to-kafka" packages="com.edsf.hbase.plugin.controller">
+<Appenders>
+   &lt;!&ndash; C://Users//Lenovo//Desktop//DBS_WORKS//edsf-hbase-plugin//edsf-hbase-plugin//app.log&ndash;&gt;
+    <MemoryMappedFile name="MyFile" fileName="C://Users//Lenovo//Desktop//DBS_WORKS//edsf-hbase-plugin//edsf-hbase-plugin//app.log">
+        <PatternLayout>
+            <Pattern>%d %p %c{1.} [%t] %m%n</Pattern>
+        </PatternLayout>
+    </MemoryMappedFile>
+</Appenders>
+<Loggers>
+    <Root level="error">
+        <AppenderRef ref="MyFile"/>
+    </Root>
+</Loggers>
+</Configuration>-->
